@@ -525,6 +525,46 @@ public function get viewMode():String
 	return __viewMode;
 }
 
+
+/**
+ * Will be invoked by Player every time player state is changes
+ * supported only by Advanced VPAID (currently not IAB Spec)
+ */
+public function onPlayerStateChange(playState:String):void
+{
+	
+}
+
+/**
+ * Will be invoked by Player as long as the Main Player actually playing the Item,
+ * see Interface for full summary
+ * supported only by Advanced VPAID (currently not IAB Spec)
+ */
+public function onPlayerTimelineProgress(currentPlayTime:Number):void
+{
+	
+}
+
+/**
+ * Will be invoked by Player When the Main item finished playing
+ * see Interface for full summary
+ * supported only by Advanced VPAID (currently not IAB Spec)
+ */
+public function onPlayerTimelineComplete():void
+{
+	
+}
+
+
+/**
+ * Will be invoked by Player as long as the Main Player actually playing the Item,
+ * see Interface for full summary
+ * supported only by Advanced VPAID (currently not IAB Spec)
+ */
+
+
+
+
 /**
  * @private
  */
