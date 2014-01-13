@@ -458,8 +458,24 @@ package com.hinish.spec.iab.vpaid
 		 * try catch statement
 		 * 
 		 */
-		function setTimelineProgress(currentPlayTime:Number):void;
 		
+		function onPlayerTimelineProgress(currentPlayTime:Number):void;
+		/**
+		 * An Extension to the standard VPAID 2.0 (IAB) Spec which is added mainly to
+		 * allow integrating Advanced Interactive ads which live along 
+		 * the player for the whole duration of the Played Item
+		 *
+		 * This method reflects the OSMF MediaPlayer's Class event TimeEvent.COMPLETE
+		 * which should be triggered when the main video item reaches completion.
+		 * 
+		 * in order to allow backward compatability and not generate
+		 * exceptions, this method should be run executed safely
+		 * either by checking if it exists or by wraping it with a 
+		 * try catch statement
+		 * 
+		 */		
+		
+		function onPlayerTimelineComplete():void;		
 		/**
 		 * An Extension to the standard VPAID 2.0 (IAB) Spec which is designed mainly to
 		 * allow integrating Advanced Interactive ads which live along 
@@ -476,23 +492,9 @@ package com.hinish.spec.iab.vpaid
 		 * either by checking if it exists or by wraping it with a 
 		 * try catch statement
 		 */
-		function setPlayerChangeState(playState:String):void;
+		function setPlayerStateChange(playState:String):void;
 		
-		/**
-		 * An Extension to the standard VPAID 2.0 (IAB) Spec which is added mainly to
-		 * allow integrating Advanced Interactive ads which live along 
-		 * the player for the whole duration of the Played Item
-		 *
-		 * This method reflects the OSMF MediaPlayer's Class event TimeEvent.COMPLETE
-		 * which should be triggered when the main video item reaches completion.
-		 * 
-		 * in order to allow backward compatability and not generate
-		 * exceptions, this method should be run executed safely
-		 * either by checking if it exists or by wraping it with a 
-		 * try catch statement
-		 * 
-		 */		
-		function setTimelineComplete():void;
+
 		
 		
 		
