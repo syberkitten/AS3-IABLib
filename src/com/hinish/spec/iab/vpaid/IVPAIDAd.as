@@ -428,5 +428,74 @@ package com.hinish.spec.iab.vpaid
 		 * AdStopped event to the player.
 		 */
 		function stopAd():void;
+		
+		/**
+		 * An Extension to the standard VPAID 2 IAB Spec which is added mainly to
+		 * allow integrating Advanced Interactive ads which live along 
+		 * the player for the whole duration of the Played Item
+		 * 
+		 * This method received one argument which reflects the current
+		 * play time of the main player in minutes. 
+		 * 
+		 * Usually this function should be called as long as the item
+		 * is playing periodically few times a second as implemented
+		 * by OSMF MediaPlayer's Class TimeEvent.CURRENT_TIME_CHANGE:
+		 * http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/org/osmf/media/MediaPlayer.html
+		 * 
+		 * the method allows the Advanced AD to track the timeline
+		 * and decide which content to show according to the current
+		 * playhead position.
+		 * 
+		 * when the function is not called, a basic deduction is that 
+		 * the current item is not played.
+		 * 
+		 * for a more specific state of the Main video player,
+		 * setPlayerChangeState() method may be used.
+		 * 
+		 * in order to allow backward compatability and not generate
+		 * exceptions, this method should be run executed safely
+		 * either by checking if it exists or by wraping it with a 
+		 * try catch statement
+		 * 
+		 */
+		function setTimelineProgress(currentPlayTime:Number):void;
+		
+		/**
+		 * An Extension to the standard VPAID 2 IAB Spec which is designed mainly to
+		 * allow integrating Advanced Interactive ads which live along 
+		 * the player for the whole duration of the Played Item
+		 *
+		 * This method received the current PlayStateChange event,
+		 * referece from the OSMF MediaPlayerStateChangeEvent.MEDIA_PLAYER_STATE_CHANGE:
+		 * http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/org/osmf/events/MediaPlayerStateChangeEvent.html
+		 * 
+		 * possible values are: playing / buffering / paused
+		 * 
+		 * in order to allow backward compatability and not generate
+		 * exceptions, this method should be run executed safely
+		 * either by checking if it exists or by wraping it with a 
+		 * try catch statement
+		 */
+		function setPlayerChangeState(playState:String):void;
+		
+		/**
+		 * An Extension to the standard VPAID 2 IAB Spec which is added mainly to
+		 * allow integrating Advanced Interactive ads which live along 
+		 * the player for the whole duration of the Played Item
+		 *
+		 * This method reflects the OSMF MediaPlayer's Class event TimeEvent.COMPLETE
+		 * which should be triggered when the main video item reaches completion.
+		 * 
+		 * in order to allow backward compatability and not generate
+		 * exceptions, this method should be run executed safely
+		 * either by checking if it exists or by wraping it with a 
+		 * try catch statement
+		 * 
+		 */		
+		function setTimelineComplete():void;
+		
+		
+		
+		
 	}
 }
