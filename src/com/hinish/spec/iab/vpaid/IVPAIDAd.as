@@ -492,7 +492,7 @@ package com.hinish.spec.iab.vpaid
 		 * either by checking if it exists or by wraping it with a 
 		 * try catch statement
 		 */
-		function setPlayerStateChange(playState:String):void;
+		function onPlayerStateChange(playState:String):void;
 		
 
 		
