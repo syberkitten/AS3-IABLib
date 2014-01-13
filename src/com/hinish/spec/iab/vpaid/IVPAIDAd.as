@@ -430,7 +430,7 @@ package com.hinish.spec.iab.vpaid
 		function stopAd():void;
 		
 		/**
-		 * An Extension to the standard VPAID 2 IAB Spec which is added mainly to
+		 * An Extension to the standard VPAID 2.0 (IAB) Spec which is added mainly to
 		 * allow integrating Advanced Interactive ads which live along 
 		 * the player for the whole duration of the Played Item
 		 * 
@@ -461,7 +461,7 @@ package com.hinish.spec.iab.vpaid
 		function setTimelineProgress(currentPlayTime:Number):void;
 		
 		/**
-		 * An Extension to the standard VPAID 2 IAB Spec which is designed mainly to
+		 * An Extension to the standard VPAID 2.0 (IAB) Spec which is designed mainly to
 		 * allow integrating Advanced Interactive ads which live along 
 		 * the player for the whole duration of the Played Item
 		 *
@@ -479,7 +479,7 @@ package com.hinish.spec.iab.vpaid
 		function setPlayerChangeState(playState:String):void;
 		
 		/**
-		 * An Extension to the standard VPAID 2 IAB Spec which is added mainly to
+		 * An Extension to the standard VPAID 2.0 (IAB) Spec which is added mainly to
 		 * allow integrating Advanced Interactive ads which live along 
 		 * the player for the whole duration of the Played Item
 		 *
