@@ -442,6 +442,9 @@ package com.hinish.spec.iab.vpaid
 		 * by OSMF MediaPlayer's Class TimeEvent.CURRENT_TIME_CHANGE:
 		 * http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/org/osmf/media/MediaPlayer.html
 		 * 
+		 * When using OSMF as stated above, time is extracted via  (event.time)  
+		 * and is reported in seconds. frequency is 2-3 times a second
+		 *
 		 * the method allows the Advanced AD to track the timeline
 		 * and decide which content to show according to the current
 		 * playhead position.
