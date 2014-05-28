@@ -485,7 +485,7 @@ package com.hinish.spec.iab.vpaid
 		 * referece from the OSMF MediaPlayerStateChangeEvent.MEDIA_PLAYER_STATE_CHANGE:
 		 * http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/org/osmf/events/MediaPlayerStateChangeEvent.html
 		 * 
-		 * possible values are: playing / buffering / paused
+		 * possible values are: loading / ready / buffering / playing / paused
 		 * 
 		 * in order to allow backward compatability and not generate
 		 * exceptions, this method should be run executed safely
